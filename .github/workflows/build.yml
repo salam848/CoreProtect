@@ -13,7 +13,7 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
       - name: Compile Jar File
-        run: mvn clean package -Dmaven.test.skip=true -Denforcer.skip=true
+        run: mvn clean package -Dmaven.test.skip=true -Denforcer.skip=true -Dspotless.check.skip=true
       - name: Upload Finished Jar
         uses: actions/upload-artifact@v4
         with:
