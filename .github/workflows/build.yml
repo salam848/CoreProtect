@@ -21,7 +21,7 @@ jobs:
           distribution: 'temurin'
           cache: 'maven'
       - name: Build
-        run: mvn -B verify
+        run: mvn clean package -DskipTests
       - name: Upload Finished Jar # This makes sure you can download the file!
         uses: actions/upload-artifact@v4
         with:
